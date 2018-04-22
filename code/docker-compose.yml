@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  bikeportalwebapp:
+    image: bikeportalwebapp
+    build:
+      context: .\BikePortalWebApp
+      dockerfile: Dockerfile

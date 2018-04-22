@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2037
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BikePortalWebApp", "BikePortalWebApp\BikePortalWebApp.csproj", "{AE212137-A23D-46B6-BAED-3A7BFCA47C02}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BikePortalWebApp.Tests", "BikePortalWebApp.Tests\BikePortalWebApp.Tests.csproj", "{CAB8C7D8-4DC0-4477-A964-9C5D59B785BA}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{CE414EA7-4E74-4469-9C4A-3CB19A5A73CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BikePortal", "BikePortal\BikePortal.csproj", "{D9A6212E-15C3-4E13-90C3-780309326E59}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BikePortalTests", "BikePortalTests\BikePortalTests.csproj", "{E82B6ADE-38E3-484A-8CD8-B151420ABA24}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AE212137-A23D-46B6-BAED-3A7BFCA47C02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE212137-A23D-46B6-BAED-3A7BFCA47C02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE212137-A23D-46B6-BAED-3A7BFCA47C02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE212137-A23D-46B6-BAED-3A7BFCA47C02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAB8C7D8-4DC0-4477-A964-9C5D59B785BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAB8C7D8-4DC0-4477-A964-9C5D59B785BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAB8C7D8-4DC0-4477-A964-9C5D59B785BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAB8C7D8-4DC0-4477-A964-9C5D59B785BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE414EA7-4E74-4469-9C4A-3CB19A5A73CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE414EA7-4E74-4469-9C4A-3CB19A5A73CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE414EA7-4E74-4469-9C4A-3CB19A5A73CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9A6212E-15C3-4E13-90C3-780309326E59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9A6212E-15C3-4E13-90C3-780309326E59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9A6212E-15C3-4E13-90C3-780309326E59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9A6212E-15C3-4E13-90C3-780309326E59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E82B6ADE-38E3-484A-8CD8-B151420ABA24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E82B6ADE-38E3-484A-8CD8-B151420ABA24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E82B6ADE-38E3-484A-8CD8-B151420ABA24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E82B6ADE-38E3-484A-8CD8-B151420ABA24}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9E413D24-2095-4207-AA0B-1C9711DEAFF7}
+	EndGlobalSection
+EndGlobal
