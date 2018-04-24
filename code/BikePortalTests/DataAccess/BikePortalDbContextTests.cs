@@ -17,7 +17,7 @@ namespace BikePortal.DataAccess.Tests
         {
             var dbContext = new BikePortalDbContext();
             Database.SetInitializer(new BikePortalDbTestInitializer());
-            var users = dbContext.Users.ToList();
+            var users = dbContext.DomainUsers.ToList();
             Assert.IsTrue(users.Count > 0);
         }
     }

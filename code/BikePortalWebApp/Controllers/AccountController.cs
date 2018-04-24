@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Web.Http;
 using System.Web.Http.ModelBinding;
+using BikePortal.Business.Entity;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
@@ -329,6 +330,15 @@ namespace BikePortalWebApp.Controllers
             }
 
             var user = new ApplicationUser() { UserName = model.Email, Email = model.Email };
+            var domainUser = new User
+            {
+                FirstName = model.FirstName,
+                LastName = model.LastName,
+                Listings = new List<Article>(),
+                Orders = new List<Order>(),
+                ShoppingCart = new ShoppingCart()
+            };
+            user.User = domainUser;
 
             IdentityResult result = await UserManager.CreateAsync(user, model.Password);
 

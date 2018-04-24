@@ -26,7 +26,7 @@ namespace BikePortal.DataAccess
                 },
             };
 
-            context.Users.AddRange(users);
+            context.DomainUsers.AddRange(users);
             context.SaveChanges();
 
             var bikes = new List<Bike>()

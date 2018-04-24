@@ -21,29 +21,29 @@ namespace BikePortal.DataAccess.Repository
 
         public User Get(int id)
         {
-            return _dbContext.Users.FirstOrDefault(u => u.Id == id);
+            return _dbContext.DomainUsers.FirstOrDefault(u => u.Id == id);
         }
 
         public IList<User> GetAll()
         {
-            return _dbContext.Users.ToList();
+            return _dbContext.DomainUsers.ToList();
         }
 
         public void Insert(User toInsert)
         {
-            _dbContext.Users.Add(toInsert);
+            _dbContext.DomainUsers.Add(toInsert);
             _dbContext.SaveChanges();
         }
 
         public void Update(User toUpdate)
         {
-            _dbContext.Users.AddOrUpdate(toUpdate);
+            _dbContext.DomainUsers.AddOrUpdate(toUpdate);
             _dbContext.SaveChanges();
         }
 
         public void Delete(User toDelete)
         {
-            _dbContext.Users.Remove(toDelete);
+            _dbContext.DomainUsers.Remove(toDelete);
             _dbContext.SaveChanges();
         }
     }
