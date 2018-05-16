@@ -8,7 +8,7 @@ using BikePortal.DataAccess.Repository;
 
 namespace BikePortal.Business.Process
 {
-    public class ArticleBll<T> where T : Article
+    public class ArticleBll<T> : IArticleBll<T> where T : Article
     {
         private readonly IArticleRepository<T> _repository;
 

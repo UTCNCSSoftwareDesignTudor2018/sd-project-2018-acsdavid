@@ -8,8 +8,9 @@ using BikePortal.Business.Entity;
 
 namespace BikePortal.DataAccess
 {
-    public interface IBikePortalDbContext
+    public interface IBikePortalDbContext 
     {
+        IDbSet<ApplicationUser> Users { get; set; }
         DbSet<User> DomainUsers { get; set; }
         DbSet<BikePart> BikeParts { get; set; }
         DbSet<Bike> Bikes { get; set; }

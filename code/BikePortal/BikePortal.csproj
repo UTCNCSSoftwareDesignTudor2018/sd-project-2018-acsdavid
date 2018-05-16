@@ -65,6 +65,10 @@
     <Compile Include="Business\Entity\User.cs" />
     <Compile Include="Business\Process\ArticleBll.cs" />
     <Compile Include="Business\Process\BikeBll.cs" />
+    <Compile Include="Business\Process\IArticleBll.cs" />
+    <Compile Include="Business\Process\IBikeBll.cs" />
+    <Compile Include="Business\Process\IUserBll.cs" />
+    <Compile Include="Business\Process\UserBll.cs" />
     <Compile Include="DataAccess\BikePortalDbContext.cs" />
     <Compile Include="DataAccess\BikePortalDbInitializer.cs" />
     <Compile Include="DataAccess\BikePortalDbTestInitializer.cs" />

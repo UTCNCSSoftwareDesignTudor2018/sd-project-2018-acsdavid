@@ -11,7 +11,7 @@ namespace BikePortal.Business.Entity
 {
     public class ApplicationUser : IdentityUser
     {
-        public User User { get; set; }
+        public virtual User User { get; set; }
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager, string authenticationType)
         {
             // Note the authenticationType must match the one defined in CookieAuthenticationOptions.AuthenticationType

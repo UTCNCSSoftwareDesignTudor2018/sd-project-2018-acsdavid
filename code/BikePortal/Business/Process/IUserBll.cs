@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BikePortal.Business.Entity;
-using BikePortal.DataAccess.Repository;
 
 namespace BikePortal.Business.Process
 {
-    public class BikeBll : ArticleBll<Bike>, IBikeBll
+    public interface IUserBll
     {
-        public BikeBll(IBikeRepository repository) : base(repository)
-        {
-        }
+        User GetUser(string userId);
+        void PutInShoppingCart(User user, Article article);
+
+        void BuyAllFromCart(User user);
     }
 }

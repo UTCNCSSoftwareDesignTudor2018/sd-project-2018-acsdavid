@@ -46,5 +46,12 @@ namespace BikePortal.DataAccess.Repository
             _dbContext.DomainUsers.Remove(toDelete);
             _dbContext.SaveChanges();
         }
+
+        public User Get(string userId)
+        {
+            var user = _dbContext.Users.FirstOrDefault(u => u.Id == userId);
+            var domainUser = user?.User;
+            return domainUser;
+        }
     }
 }
