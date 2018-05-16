@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-
-namespace BikePortalWebApp.Models
+﻿namespace BikePortalWebApp.Models.ViewModel
 {
-    public class ArticleDto
+    public class ArticleViewModel
     {
         public int Id { get; set; }
         public string Name { get; set; }

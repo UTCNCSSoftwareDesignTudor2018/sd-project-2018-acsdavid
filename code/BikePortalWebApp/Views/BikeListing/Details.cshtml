@@ -1,0 +1,33 @@
+﻿@model  int
+@{
+    ViewBag.Title = "title";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<p id="bikeId" hidden>@Model</p>
+
+<h2 id="name">Loading</h2>
+
+<h3>description</h3>
+
+<p id="description">loading</p>
+<h3>price</h3>
+<p id="price">loading</p>
+
+<h3>model</h3>
+<p id="model">loading</p>
+
+<button id="addToCart">Add to cart</button>
+
+<br>
+
+<input type="text" id="commentTextBox"/>
+<button id="postCommentButton">Post comment</button>
+
+<h3>Comments</h3>
+
+<ul id="commentList">
+
+</ul>
+
+<script src="~/Scripts/UserScripts/bike_listing_detail.js"></script>

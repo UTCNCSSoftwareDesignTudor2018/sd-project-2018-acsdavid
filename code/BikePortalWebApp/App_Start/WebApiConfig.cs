@@ -23,7 +23,7 @@ namespace BikePortalWebApp
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{id}",
-                defaults: new { id = RouteParameter.Optional, action = "Get" }
+                defaults: new { id = RouteParameter.Optional }
             );
 
             config.Routes.MapHttpRoute(

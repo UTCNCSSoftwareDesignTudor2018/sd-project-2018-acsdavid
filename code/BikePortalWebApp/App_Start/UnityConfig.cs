@@ -1,5 +1,6 @@
 using System;
 using AutoMapper;
+using BikePortal.Business.Process;
 using BikePortal.DataAccess;
 using BikePortal.DataAccess.Repository;
 using BikePortalWebApp.Controllers;
@@ -52,6 +53,9 @@ namespace BikePortalWebApp
             container.RegisterType<IBikePartRepository, BikePartRepository>();
             container.RegisterType<IBikeRepository, BikeRepository>();
             container.RegisterType<IUserRepository, UserRepository>();
+
+            container.RegisterType<IBikeBll, BikeBll>();
+            container.RegisterType<IUserBll, UserBll>();
 
             container.RegisterInstance<IMapper>(BikePortalMapper.Create());
 

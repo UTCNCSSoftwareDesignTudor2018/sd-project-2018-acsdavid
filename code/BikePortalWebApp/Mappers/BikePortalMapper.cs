@@ -5,6 +5,8 @@ using System.Web;
 using AutoMapper;
 using BikePortal.Business.Entity;
 using BikePortalWebApp.Models;
+using BikePortalWebApp.Models.BindingModel;
+using BikePortalWebApp.Models.ViewModel;
 
 namespace BikePortalWebApp.Mappers
 {
@@ -12,14 +14,20 @@ namespace BikePortalWebApp.Mappers
     {
         private static readonly MapperConfiguration Configuration = new MapperConfiguration(cfg =>
             {
-                cfg.CreateMap<Bike, BikeDto>();
-                cfg.CreateMap<User, UserDto>();
-                cfg.CreateMap<Comment, CommentDto>();
-                cfg.CreateMap<CommentFormDto, Comment>()
+                cfg.CreateMap<Bike, BikeViewModel>();
+                cfg.CreateMap<BikeBindingModel, Bike>()
+                    .ForMember(
+                        b => b.Comments,
+                        bbm => bbm.MapFrom(_ => new List<Comment>())
+                    );
+                cfg.CreateMap<User, UserViewModel>();
+                cfg.CreateMap<Comment, CommentViewModel>();
+                cfg.CreateMap<CommentBindingModel, Comment>()
                     .ForMember(
                         c => c.Date,
                         cfdto => cfdto.MapFrom(_ => DateTime.Now)
                     );
+                cfg.CreateMap<ShoppingCartItem, ShoppingCartItemViewModel>();
             });
 
         public static  IMapper Create()

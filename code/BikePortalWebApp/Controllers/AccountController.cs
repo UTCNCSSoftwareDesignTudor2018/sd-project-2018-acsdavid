@@ -15,6 +15,8 @@ using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.OAuth;
 using BikePortalWebApp.Models;
+using BikePortalWebApp.Models.BindingModel;
+using BikePortalWebApp.Models.ViewModel;
 using BikePortalWebApp.Providers;
 using BikePortalWebApp.Results;
 

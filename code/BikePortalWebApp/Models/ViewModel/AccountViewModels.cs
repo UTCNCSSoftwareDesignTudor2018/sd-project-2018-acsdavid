@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
-namespace BikePortalWebApp.Models
+namespace BikePortalWebApp.Models.ViewModel
 {
     // Models returned by AccountController actions.
 
