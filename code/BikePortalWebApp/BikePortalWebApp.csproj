@@ -244,6 +244,8 @@
     <Compile Include="Areas\HelpPage\ApiDescriptionExtensions.cs" />
     <Compile Include="Areas\HelpPage\App_Start\HelpPageConfig.cs" />
     <Compile Include="Areas\HelpPage\Controllers\HelpController.cs" />
+    <Compile Include="Controllers\UserOrderController.cs" />
+    <Compile Include="Controllers\OrderListController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Areas\HelpPage\HelpPageAreaRegistration.cs" />
     <Compile Include="Areas\HelpPage\HelpPageConfigurationExtensions.cs" />
@@ -293,6 +295,8 @@
     <Compile Include="Models\ViewModel\BikeViewModel.cs" />
     <Compile Include="Models\ViewModel\CommentViewModel.cs" />
     <Compile Include="Models\BindingModel\CommentBindingModel.cs" />
+    <Compile Include="Models\ViewModel\OrderItemViewModel.cs" />
+    <Compile Include="Models\ViewModel\OrderViewModel.cs" />
     <Compile Include="Models\ViewModel\ShoppingCartItemViewModel.cs" />
     <Compile Include="Models\ViewModel\UserViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -337,9 +341,12 @@
     <Content Include="Scripts\notify.js" />
     <Content Include="Scripts\UserScripts\added_article.js" />
     <Content Include="Scripts\UserScripts\add_bike.js" />
+    <Content Include="Scripts\UserScripts\order_article_listing.js" />
+    <Content Include="Scripts\UserScripts\order_listing.js" />
     <Content Include="Scripts\UserScripts\register.js" />
     <Content Include="Scripts\UserScripts\shopping_list.js" />
     <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\OrderList\Index.cshtml" />
     <None Include="Dockerfile" />
     <None Include=".dockerignore">
       <DependentUpon>Dockerfile</DependentUpon>
@@ -378,6 +385,7 @@
     <Content Include="Views\Register\Index.cshtml" />
     <Content Include="Views\ShoppingList\Index.cshtml" />
     <Content Include="Views\BikeListing\AddBike.cshtml" />
+    <Content Include="Views\OrderList\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

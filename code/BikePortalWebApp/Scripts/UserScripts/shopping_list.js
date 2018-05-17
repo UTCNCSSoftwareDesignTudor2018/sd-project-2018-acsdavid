@@ -4,12 +4,13 @@ function buyAllFromCartClicked() {
     var headers = getAuthHeaders();
     $.ajax({
         type: "POST",
-        url: "/api/User/BuyAllFromCart",
+        url: "/api/User/PostBuyAllFromCart",
         headers: headers
     }).done(function() {
         alert("you have bought all items from the shopping cart");
-    }).fail(function() {
+    }).fail(function(jhqxr) {
         alert("an error occoured");
+        console.log(jhqxr);
     });
 }
 

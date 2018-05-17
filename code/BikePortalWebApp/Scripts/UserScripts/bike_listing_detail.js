@@ -49,11 +49,7 @@ function bikeListingReady() {
     });
 
     $("#postCommentButton").click(function() {
-        var token = sessionStorage.getItem(tokenKey);
-        var headers = {};
-        if (token) {
-            headers.Authorization = "Bearer " + token;
-        }
+        var headers = getAuthHeaders();
 
         var data = {
             commentText: $("#commentTextBox").val()

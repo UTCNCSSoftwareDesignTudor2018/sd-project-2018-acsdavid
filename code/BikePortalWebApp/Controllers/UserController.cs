@@ -31,6 +31,30 @@ namespace BikePortalWebApp.Controllers
             return shoppingCartItems.Select(sci => _mapper.Map<ShoppingCartItemViewModel>(sci));
         }
 
+        // GET: api/User/GetOrder/1
+        public OrderViewModel GetOrder(int id)
+        {
+            var user = GetDomainUser();
+            Debug.Assert(user != null);
+
+            var order = user.Orders.FirstOrDefault(o => o.Id == id);
+
+            return _mapper.Map<OrderViewModel>(order);
+        }
+
+        // GET: api/User/GetOrders
+        public IEnumerable<OrderViewModel> GetOrders()
+        {
+            var user = GetDomainUser();
+            Debug.Assert(user != null);
+
+            var orders = user.Orders;
+            var orderViewModels = orders.Select(o => _mapper.Map<OrderViewModel>(o));
+
+            return orderViewModels;
+        }
+
+        // POST: api/User/PostBuyAllFromCart
         public IHttpActionResult PostBuyAllFromCart()
         {
             var user = GetDomainUser();

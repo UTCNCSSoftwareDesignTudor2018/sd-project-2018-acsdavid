@@ -1,0 +1,25 @@
+﻿@model int
+
+@{
+    ViewBag.Title = "Order Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<p id="orderId" hidden>@Model</p>
+
+<h2>Order details</h2>
+
+<h3>Order id</h3>
+
+<p>@Model</p>
+
+<h3>Articles</h3>
+
+<table id="orderArticleTable" class="table-bordered">
+    <tr>
+        <th>Article</th>
+        <th>Quantity</th>
+    </tr>
+</table>
+
+<script src="~/Scripts/UserScripts/order_article_listing.js"></script>

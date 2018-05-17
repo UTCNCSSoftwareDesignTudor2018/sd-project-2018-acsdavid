@@ -28,9 +28,12 @@ namespace BikePortalWebApp.Mappers
                         cfdto => cfdto.MapFrom(_ => DateTime.Now)
                     );
                 cfg.CreateMap<ShoppingCartItem, ShoppingCartItemViewModel>();
+
+                cfg.CreateMap<Order, OrderViewModel>();
+                cfg.CreateMap<OrderItem, OrderItemViewModel>();
             });
 
-        public static  IMapper Create()
+        public static IMapper Create()
         {
             return Configuration.CreateMapper();
         }

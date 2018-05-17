@@ -17,11 +17,7 @@ function addBikeButtonClicked() {
         window.location = "/Login";
     }
 
-    var token = sessionStorage.getItem(tokenKey);
-    var headers = {};
-    if (token) {
-        headers.Authorization = "Bearer " + token;
-    }
+    var headers = getAuthHeaders();
 
     $.ajax({
         type: "POST",
