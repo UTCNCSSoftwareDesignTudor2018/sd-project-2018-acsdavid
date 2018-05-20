@@ -7,6 +7,7 @@ using BikePortalWebApp.Controllers;
 using BikePortalWebApp.Mappers;
 using Unity;
 using Unity.Injection;
+using Unity.Lifetime;
 
 namespace BikePortalWebApp
 {
@@ -60,7 +61,7 @@ namespace BikePortalWebApp
 
             container.RegisterType<AccountController>(new InjectionConstructor());
             
-            container.RegisterType<IBikePortalDbContext, BikePortalDbContext>();
+            container.RegisterType<IBikePortalDbContext, BikePortalDbContext>(new PerThreadLifetimeManager());
         }
     }
 }
