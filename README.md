@@ -1,7 +1,7 @@
 Ács Dávid
 
 Layers architectural style.
-Another architectural style: server-client, MVC.
+Another architectural style: server-client, MVC, REST API.
 
 Design patterns: 
 	Factory pattern: In Order class.
