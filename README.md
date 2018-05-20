@@ -7,6 +7,7 @@ Design patterns:
 	Factory pattern: In Order class.
 	Observer pattern implemented with SignalR library. 
 	Related classes/files: ArticleAdded, ArticleAddedHub, added_article.js
+	Builder pattern in Report package.
 
 ManyToMany: 
 	A User has many Articles she/he ordered and Articles may be ordered by many Users.
