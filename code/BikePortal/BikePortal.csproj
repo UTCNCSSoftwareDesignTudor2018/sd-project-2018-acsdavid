@@ -67,7 +67,9 @@
     <Compile Include="Business\Process\BikeBll.cs" />
     <Compile Include="Business\Process\IArticleBll.cs" />
     <Compile Include="Business\Process\IBikeBll.cs" />
+    <Compile Include="Business\Process\IOrderBll.cs" />
     <Compile Include="Business\Process\IUserBll.cs" />
+    <Compile Include="Business\Process\OrderBll.cs" />
     <Compile Include="Business\Process\UserBll.cs" />
     <Compile Include="DataAccess\BikePortalDbContext.cs" />
     <Compile Include="DataAccess\BikePortalDbInitializer.cs" />
@@ -79,7 +81,9 @@
     <Compile Include="DataAccess\Repository\IBikePartRepository.cs" />
     <Compile Include="DataAccess\Repository\IBikeRepository.cs" />
     <Compile Include="DataAccess\Repository\IGenericRepository.cs" />
+    <Compile Include="DataAccess\Repository\IOrderRepository.cs" />
     <Compile Include="DataAccess\Repository\IUserRepository.cs" />
+    <Compile Include="DataAccess\Repository\OrderRepository.cs" />
     <Compile Include="DataAccess\Repository\UserRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

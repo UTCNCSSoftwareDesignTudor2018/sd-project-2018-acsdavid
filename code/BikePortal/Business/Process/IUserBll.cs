@@ -13,5 +13,9 @@ namespace BikePortal.Business.Process
         void PutInShoppingCart(User user, Article article);
 
         void BuyAllFromCart(User user);
+        IList<User> GetAll();
+        User Get(int id);
+        void Update(User user);
+        void Delete(User user);
     }
 }

@@ -1,0 +1,75 @@
+﻿@model BikePortal.Business.Entity.User
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>User</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+        
+        <dt>
+            @Html.DisplayNameFor(model => model.Listings)
+        </dt>
+        
+        <dd>
+            <table class="table-bordered">
+                <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                </tr>
+                @foreach (var article in @Model.Listings)
+                {
+                    <tr>
+                        <td> @article.Name </td>
+                        <td> @article.Price </td>
+                    </tr>
+                }
+            </table>
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Comments)
+        </dt>
+        
+        <dd>
+            <table class="table-bordered">
+                <tr>
+                    <th>Text</th>
+                    <th>Date</th>
+                </tr>
+                @foreach (var comment in @Model.Comments)
+                {
+                    <tr>
+                        <td> @comment.CommentText </td>
+                        <td> @comment.Date </td>
+                    </tr>
+                }
+            </table>
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

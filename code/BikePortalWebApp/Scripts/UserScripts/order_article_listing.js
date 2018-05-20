@@ -26,6 +26,10 @@ function orderArticleReady() {
     }).done(function (data) {
         console.log(data);
 
+        var date = data.Date;
+
+        $("#orderDetailsDate").text(date);
+
         $.each(data.OrderedArticles,
             function(index, orderedArticle) {
                 var formattedOrderedArticle = formatOrderedArticle(orderedArticle);

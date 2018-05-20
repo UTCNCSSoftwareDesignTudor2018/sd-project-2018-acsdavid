@@ -1,0 +1,50 @@
+﻿@model BikePortal.Business.Entity.Order
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Order</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+        
+        <dt>
+            @Html.DisplayNameFor(model => model.OrderedArticles);
+        </dt>
+        
+        <dd>
+            <table class="table-bordered">
+                <tr>
+                    <td>Name</td>
+                    <td>Price</td>
+                    <td>Quantity</td>
+                </tr>
+
+                @foreach (var article in Model.OrderedArticles)
+                {
+                    <tr>
+                        <td>@article.Article.Name</td>
+                        <td>@article.PricePerItem</td>
+                        <td>@article.Quantity</td>
+                    </tr>
+                }
+            </table>
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

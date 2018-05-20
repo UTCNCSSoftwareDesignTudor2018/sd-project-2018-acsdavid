@@ -332,15 +332,7 @@ namespace BikePortalWebApp.Controllers
             }
 
             var user = new ApplicationUser() { UserName = model.Email, Email = model.Email };
-            var domainUser = new User
-            {
-                FirstName = model.FirstName,
-                LastName = model.LastName,
-                Listings = new List<Article>(),
-                Orders = new List<Order>(),
-                ShoppingCart = new ShoppingCart()
-            };
-            user.User = domainUser;
+            user.User = BikePortal.Business.Entity.User.Create(model.FirstName, model.LastName);
 
             IdentityResult result = await UserManager.CreateAsync(user, model.Password);
 

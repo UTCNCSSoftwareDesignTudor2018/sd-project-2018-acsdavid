@@ -18,6 +18,7 @@ namespace BikePortal.DataAccess
         public DbSet<User> DomainUsers { get; set; }
         public DbSet<BikePart> BikeParts { get; set; }
         public DbSet<Bike> Bikes { get; set; }
+        public DbSet<Order> Orders { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -29,6 +30,7 @@ namespace BikePortal.DataAccess
             modelBuilder.Entity<Bike>().ToTable("Bikes");
             modelBuilder.Entity<BikePart>().ToTable("BikeParts");
             modelBuilder.Entity<Article>().ToTable("Articles");
+            modelBuilder.Entity<Order>().ToTable("Orders");
         }
 
         public static BikePortalDbContext Create()

@@ -34,5 +34,25 @@ namespace BikePortal.Business.Process
             user.BuyAllFromCart();
             _userRepository.Update(user);
         }
+
+        public IList<User> GetAll()
+        {
+            return _userRepository.GetAll();
+        }
+
+        public User Get(int id)
+        {
+            return _userRepository.Get(id);
+        }
+
+        public void Update(User user)
+        {
+            _userRepository.Update(user);
+        }
+
+        public void Delete(User user)
+        {
+            _userRepository.Update(user);
+        }
     }
 }

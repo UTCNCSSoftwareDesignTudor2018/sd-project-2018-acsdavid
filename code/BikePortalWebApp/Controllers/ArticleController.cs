@@ -57,6 +57,7 @@ namespace BikePortalWebApp.Controllers
         }
 
         // POST: api/Article/5/PostComment
+        [Authorize]
         public IHttpActionResult PostComment(int id, [FromBody] CommentBindingModel commentForm)
         {
             if (!ModelState.IsValid)
@@ -64,6 +65,10 @@ namespace BikePortalWebApp.Controllers
                 return BadRequest(ModelState);
             }
             var comment = Mapper.Map<Comment>(commentForm);
+            var commenter = GetDomainUser();
+            Debug.Assert(commenter != null);
+
+            comment.Commenter = commenter;
             var article = _articleBll.Get(id);
             _articleBll.AddComment(article, comment);
             return Ok();

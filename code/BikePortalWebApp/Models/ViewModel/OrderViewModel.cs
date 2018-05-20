@@ -8,6 +8,7 @@ namespace BikePortalWebApp.Models.ViewModel
     public class OrderViewModel
     {
         public int Id { get; set; }
+        public DateTime Date { get; set; }
         public IList<OrderItemViewModel> OrderedArticles { get; set; }
     }
 }

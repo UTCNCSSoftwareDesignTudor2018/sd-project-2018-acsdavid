@@ -6,14 +6,13 @@ using System.Web.Mvc;
 
 namespace BikePortalWebApp.Controllers
 {
-    public class UpdateController : Controller
+    [Authorize(Roles = "admin")]
+    public class AdminViewController : Controller
     {
-        // GET: Update
-        public void Index()
+        // GET: AdminView
+        public ActionResult Index()
         {
-            Response.ContentType = "text/event-stream";
-
-            
+            return View();
         }
     }
 }

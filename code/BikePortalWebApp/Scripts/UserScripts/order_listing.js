@@ -18,7 +18,7 @@
         for (var i = 0; i < data.length; i++) {
             var order = data[i];
             var link = "/OrderList/" + order.Id + "/Details/";
-            var listItem = "<li>" + "<a href='" + link + "'>" + "Order: " + order.Id + "</a>" + "</li>";
+            var listItem = "<li>" + "<a href='" + link + "'>" + "Order: " + order.Id + " at " + order.Date + "</a>" + "</li>";
             $("#orderList").append(listItem);
         }
     }).fail(function() {

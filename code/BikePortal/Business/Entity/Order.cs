@@ -9,6 +9,7 @@ namespace BikePortal.Business.Entity
     public class Order
     {
         public int Id { get; set; }
+        public DateTime Date { get; set; }
         public virtual User User { get; set; }
         public virtual ICollection<OrderItem> OrderedArticles { get; set; }
 
@@ -20,6 +21,7 @@ namespace BikePortal.Business.Entity
         {
             User = user;
             OrderedArticles = orderedItems;
+            Date = DateTime.Now;
         }
 
         public void AddItem(OrderItem orderItem)

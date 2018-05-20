@@ -5,9 +5,6 @@ using BikePortal.DataAccess;
 using BikePortal.DataAccess.Repository;
 using BikePortalWebApp.Controllers;
 using BikePortalWebApp.Mappers;
-using BikePortalWebApp.Models;
-using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.EntityFramework;
 using Unity;
 using Unity.Injection;
 
@@ -53,15 +50,17 @@ namespace BikePortalWebApp
             container.RegisterType<IBikePartRepository, BikePartRepository>();
             container.RegisterType<IBikeRepository, BikeRepository>();
             container.RegisterType<IUserRepository, UserRepository>();
+            container.RegisterType<IOrderRepository, OrderRepository>();
 
             container.RegisterType<IBikeBll, BikeBll>();
             container.RegisterType<IUserBll, UserBll>();
+            container.RegisterType<IOrderBll, OrderBll>();
 
             container.RegisterInstance<IMapper>(BikePortalMapper.Create());
 
             container.RegisterType<AccountController>(new InjectionConstructor());
             
-            container.RegisterInstance<IBikePortalDbContext>(new BikePortalDbContext());
+            container.RegisterType<IBikePortalDbContext, BikePortalDbContext>();
         }
     }
 }

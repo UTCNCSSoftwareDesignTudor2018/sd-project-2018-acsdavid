@@ -14,6 +14,7 @@ namespace BikePortal.DataAccess
         DbSet<User> DomainUsers { get; set; }
         DbSet<BikePart> BikeParts { get; set; }
         DbSet<Bike> Bikes { get; set; }
+        DbSet<Order> Orders { get; set; }
 
         int SaveChanges();
     }

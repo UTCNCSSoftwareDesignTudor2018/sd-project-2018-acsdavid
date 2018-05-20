@@ -14,6 +14,7 @@ namespace BikePortal.Business.Entity
         public virtual ShoppingCart ShoppingCart { get; set; }
         public virtual ICollection<Order> Orders { get; set; }
         public virtual ICollection<Article> Listings { get; set; }
+        public virtual ICollection<Comment> Comments { get; set; }
 
         public void BuyAllFromCart()
         {
@@ -50,6 +51,20 @@ namespace BikePortal.Business.Entity
                 hashCode = (hashCode * 397) ^ (LastName != null ? LastName.GetHashCode() : 0);
                 return hashCode;
             }
+        }
+
+        public static User Create(string firstName, string lastName)
+        {
+            var domainUser = new User
+            {
+                FirstName = firstName,
+                LastName = lastName,
+                Listings = new List<Article>(),
+                Orders = new List<Order>(),
+                ShoppingCart = new ShoppingCart()
+            };
+
+            return domainUser;
         }
     }
 }
