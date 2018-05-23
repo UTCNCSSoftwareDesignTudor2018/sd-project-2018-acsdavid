@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace BikePortalWebApp.Models.BindingModel
 {
@@ -17,6 +18,7 @@ namespace BikePortalWebApp.Models.BindingModel
         public string Description { get; set; }
 
         [Required]
+        [Range(0, double.MaxValue, ErrorMessage = "Price should be positive")]
         public decimal Price { get; set; }
     }
 }
